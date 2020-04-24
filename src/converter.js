@@ -1,15 +1,13 @@
 export class Converter{
 
   async apiCall() {
-    try{
-      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.AP_KEY}/latest/USD`);
+      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
       if (response.ok && response.status === 200) {
         jsonifiedResponse = await response.json();
       }else{
         jsonifiedResponse = false;
       }
-      console.log(jsonifiedResponse);
       if(jsonifiedResponse.error === "invalid-key"){
         alert("Please verify that you are using a valid API key");
       }else if(jsonifiedResponse.error === "unknown-code"){
@@ -18,9 +16,6 @@ export class Converter{
         alert("Something went wrong!  Please reach out to us at: https://github.com/reidashwill/week-6-project/issues");
       }
       return jsonifiedResponse;
-    }catch(error){
-      return false;
-    }
   }
 
 
