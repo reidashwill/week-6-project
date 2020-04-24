@@ -10,7 +10,6 @@ export class Converter{
         
         jsonifiedResponse = false;
       }
-      console.log(jsonifiedResponse.conversion_rates);
       return jsonifiedResponse;
     }catch(error){ // ADD MORE ERROR MESSAGE OPTIONS-----------------------------------------
       alert("there was an error processing your request");
@@ -18,16 +17,22 @@ export class Converter{
   }
 
   convert(){
-    console.log(this.currency);
-    console.log(this.eurRate);
-    console.log(this.usd);
     if(this.currency === "eur"){
-      console.log("test");
       this.converted = (this.usd * this.eurRate);
-      console.log(this.converted);
+    }else if(this.currency === "cad"){
+      this.converted = (this.usd * this.cadRate);
+    }else if(this.currency === "dkk"){
+      this.converted = (this.usd * this.dkkRate);
+    }else if(this.currency === "egp"){
+      this.converted = (this.usd * this.egpRate);
+    }else if(this.currency === "gbp"){
+      this.converted = (this.usd * this.gbpRate);
+    }else if(this.currency === "nok"){
+      this.converted = (this.usd * this.nokRate);
+    }else if(this.currency === "sek"){
+      this.converted = (this.usd * this.sekRate);
+    }else if(this.currency === "rub"){
+      this.converted = (this.usd * this.rubRate);
     }
-  
-    
-
   }
 }
