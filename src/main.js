@@ -4,6 +4,7 @@ import './styles.css';
 import $ from "jquery";
 import { Converter } from './../src/converter.js';
 
+
 $(document).ready(function(){
   $("#formGroup").submit(function(event){
     event.preventDefault();
@@ -21,6 +22,9 @@ $(document).ready(function(){
       conversions.sekRate = response.conversion_rates.SEK;
       conversions.rubRate = response.conversion_rates.RUB;
       conversions.convert(response);
+      $("#input-return").html(conversions.usd);
+      $("#converted-return").html(" " + conversions.converted);
+      $("#currency-type").html(" " + conversions.currency.toUpperCase());
     })();
   });
 });
