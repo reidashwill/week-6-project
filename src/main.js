@@ -9,9 +9,9 @@ $(document).ready(function(){
     event.preventDefault();
     (async () => {
       let conversions = new Converter;
-      let response = await conversions.apiCall();
       conversions.usd = parseInt($("#amount").val());
       conversions.currency = $("#currencySelector").val();
+      let response = await conversions.apiCall();
       conversions.eurRate = response.conversion_rates.EUR;
       conversions.cadRate = response.conversion_rates.CAD;
       conversions.dkkRate = response.conversion_rates.DKK;
