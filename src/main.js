@@ -23,10 +23,9 @@ $(document).ready(function(){
       conversions.sekRate = response.conversion_rates.SEK;
       conversions.rubRate = response.conversion_rates.RUB;
       conversions.btcPrice = response2.USD.buy;
-      console.log(conversions.btcPrice)
       conversions.convert(response);
       if(conversions.currency !== "eur" && conversions.currency !== "cad" && conversions.currency !== "dkk" && conversions.currency !== "egp" && conversions.currency !== "gbp" && conversions.currency !== "nok" && conversions.currency !== "sek" && conversions.currency !== "rub"){
-        alert("This currency is not currently supported!")
+        alert("This currency is not currently supported!");
       }
       $(".results").show();
       $("#input-return").html(conversions.usd);

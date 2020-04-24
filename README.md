@@ -26,7 +26,7 @@ _This app requires node to function!  if you do not currently have node installe
 * _Run the command: npm install_
 * _Run the command: npm run start_
 
-* _Alternately, navigate to: https://sad-ramanujan-638d1b.netlify.app/_
+* _Alternately, navigate to: https://gracious-mcnulty-a646fc.netlify.app/_
 
 ## Known Bugs
 
