@@ -2,3 +2,6 @@
   background-color: #52835A;
   opacity: 80%;
 }
+.results{
+  display: none;
+}

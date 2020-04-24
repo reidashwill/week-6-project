@@ -13,6 +13,7 @@ $(document).ready(function(){
       conversions.usd = parseInt($("#amount").val());
       conversions.currency = $("#currencySelector").val();
       let response = await conversions.apiCall();
+      let response2 = await conversions.bitCoinApiCall();
       conversions.eurRate = response.conversion_rates.EUR;
       conversions.cadRate = response.conversion_rates.CAD;
       conversions.dkkRate = response.conversion_rates.DKK;
@@ -21,7 +22,10 @@ $(document).ready(function(){
       conversions.nokRate = response.conversion_rates.NOK;
       conversions.sekRate = response.conversion_rates.SEK;
       conversions.rubRate = response.conversion_rates.RUB;
+      conversions.btcPrice = response2.USD.buy;
+      console.log(conversions.btcPrice)
       conversions.convert(response);
+      $(".results").show();
       $("#input-return").html(conversions.usd);
       $("#converted-return").html(" " + conversions.converted);
       $("#currency-type").html(" " + conversions.currency.toUpperCase());

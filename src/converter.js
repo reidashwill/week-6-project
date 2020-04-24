@@ -17,6 +17,16 @@ export class Converter{
       }
       return jsonifiedResponse;
   }
+  async bitCoinApiCall() {
+    let response2 = await fetch(`https://blockchain.info/ticker`);
+    let jsonifiedResponse2;
+    if (response2.ok && response2.status === 200) {
+      jsonifiedResponse2 = await response2.json();
+    }else{
+      jsonifiedResponse2 = false;
+    }
+    return jsonifiedResponse2;
+}
 
 
   convert(){
