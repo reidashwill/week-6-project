@@ -10,7 +10,7 @@ export class Converter{
         
         jsonifiedResponse = false;
       }
-      console.log(jsonifiedResponse);
+      console.log(jsonifiedResponse.conversion_rates);
       return jsonifiedResponse;
     }catch(error){
       return false;

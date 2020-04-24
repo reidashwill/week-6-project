@@ -5,6 +5,11 @@ import $ from "jquery";
 import { Converter } from './../src/converter.js';
 
 $(document).ready(function(){
-  let conversionTest = new Converter
-  conversionTest.apiCall();
+  
+  (async () => {
+    let conversions = new Converter
+    let response = await conversions.apiCall();
+    console.log(response.conversion_rates.USD);
+  })();
+  
 })
