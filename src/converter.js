@@ -15,6 +15,9 @@ export class Converter{
     }catch(error){ // ADD MORE ERROR MESSAGE OPTIONS-----------------------------------------
       alert("there was an error processing your request");
     }
-    
+  }
+
+  convert(){
+
   }
 }

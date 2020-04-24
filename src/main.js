@@ -5,11 +5,17 @@ import $ from "jquery";
 import { Converter } from './../src/converter.js';
 
 $(document).ready(function(){
-  
-  (async () => {
-    let conversions = new Converter;
-    let response = await conversions.apiCall();
-    console.log(response.conversion_rates.USD);
-  })();
-  
+  $("#formGroup").submit(function(event){
+    event.preventDefault();
+      (async () => {
+      let conversions = new Converter;
+      let response = await conversions.apiCall();
+      conversions.usd = $("#amount").val();
+      conversions.currency = $("#currencySelector").val()
+      if(conversions.currency === "EUR"){
+       conversions.usd.convert(conversions.currency);
+      }
+      console.log(response.conversion_rates.USD);
+    })();
+  })
 });
