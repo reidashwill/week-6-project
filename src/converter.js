@@ -3,12 +3,10 @@ export class Converter{
   async apiCall() {
       let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
-      let storedData;
-      if(storedData !== null){
+      let data;
+      if(data === undefined){
         if (response.ok && response.status === 200) {
           jsonifiedResponse = await response.json();
-          sessionStorage.setItem('dataStored', jsonifiedResponse);
-          storedData = sessionStorage.getItem('dataStored');
         }else{
           jsonifiedResponse = false;
         }
@@ -19,8 +17,14 @@ export class Converter{
         }else if(jsonifiedResponse.error === "malformed-request" || jsonifiedResponse.error === "quota-reached"){
           alert("Something went wrong!  Please reach out to us at: https://github.com/reidashwill/week-6-project/issues");
         }
+        sessionStorage.setItem('dataStored', jsonifiedResponse);
+          data = sessionStorage.getItem('dataStored');
+          console.log(data);
         return jsonifiedResponse;
-      }  
+      }else{
+        console.log(data)
+        return data;
+      }
   }
   async bitCoinApiCall() {
     let response2 = await fetch(`https://blockchain.info/ticker`);
