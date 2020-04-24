@@ -12,7 +12,7 @@ export class Converter{
       }
       return jsonifiedResponse;
     }catch(error){ // ADD MORE ERROR MESSAGE OPTIONS-----------------------------------------
-      alert("there was an error processing your request");
+      alert("There was an error processing your request.  Please verify that you are using a valid API key in your .env file");
     }
   }
 
