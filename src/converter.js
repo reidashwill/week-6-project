@@ -18,6 +18,16 @@ export class Converter{
   }
 
   convert(){
+    console.log(this.currency);
+    console.log(this.eurRate);
+    console.log(this.usd);
+    if(this.currency === "eur"){
+      console.log("test");
+      this.converted = (this.usd * this.eurRate);
+      console.log(this.converted);
+    }
+  
+    
 
   }
 }

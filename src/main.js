@@ -7,15 +7,20 @@ import { Converter } from './../src/converter.js';
 $(document).ready(function(){
   $("#formGroup").submit(function(event){
     event.preventDefault();
-      (async () => {
+    (async () => {
       let conversions = new Converter;
       let response = await conversions.apiCall();
-      conversions.usd = $("#amount").val();
-      conversions.currency = $("#currencySelector").val()
-      if(conversions.currency === "EUR"){
-       conversions.usd.convert(conversions.currency);
-      }
-      console.log(response.conversion_rates.USD);
+      conversions.usd = parseInt($("#amount").val());
+      conversions.currency = $("#currencySelector").val();
+      conversions.eurRate = response.conversion_rates.EUR;
+      conversions.cadRate = response.conversion_rates.CAD;
+      conversions.dkkRate = response.conversion_rates.DKK;
+      conversions.egpRate = response.conversion_rates.EGP;
+      conversions.gbpRate = response.conversion_rates.GBP;
+      conversions.nokRate = response.conversion_rates.NOK;
+      conversions.sekRate = response.conversion_rates.SEK;
+      conversions.rubRate = response.conversion_rates.RUB;
+      conversions.convert(response);
     })();
-  })
+  });
 });
