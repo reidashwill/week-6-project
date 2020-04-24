@@ -25,7 +25,7 @@ $(document).ready(function(){
       conversions.btcPrice = response2.USD.buy;
       console.log(conversions.btcPrice)
       conversions.convert(response);
-      if(jsonifiedResponse.currency !== "eur" || jsonifiedResponse.currency !== "cad" || jsonifiedResponse.currency !== "dkk" || jsonifiedResponse.currency !== "egp" || jsonifiedResponse.currency !== "gbp" || jsonifiedResponse.currency !== "nok" || jsonifiedResponse.currency !== "sek" || jsonifiedResponse.currency !== "rub"){
+      if(conversions.currency !== "eur" && conversions.currency !== "cad" && conversions.currency !== "dkk" && conversions.currency !== "egp" && conversions.currency !== "gbp" && conversions.currency !== "nok" && conversions.currency !== "sek" && conversions.currency !== "rub"){
         alert("This currency is not currently supported!")
       }
       $(".results").show();
