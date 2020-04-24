@@ -18,13 +18,15 @@ _This project was made as my week 6 independant project for Epicodus.  It will t
 * _6  Present the user with the amount of BTC they could purchase with this amount of money_
 
 ## Setup/Installation Requirements
-_This app requires node to function!  if you do not currently have node installed on your machine, please visit: https://nodejs.org/en/ to download it!_
+_This app requires node to function!  if you do not currently have node installed on your machine, please visit: https://nodejs.org/ to download it!_
 
 * _Navigate to https://github.com/reidashwill/week-6-project_
 * _Clone the respository located there_
 * _In the terminal, navigate to the cloned repository_
 * _Run the command: npm install_
 * _Run the command: npm run start_
+
+* _Alternately, navigate to: https://sad-ramanujan-638d1b.netlify.app/_
 
 ## Known Bugs
 
