@@ -12,7 +12,7 @@ export class Converter{
       }
       console.log(jsonifiedResponse.conversion_rates);
       return jsonifiedResponse;
-    }catch(error){
+    }catch(error){ // ADD MORE ERROR MESSAGE OPTIONS-----------------------------------------
       alert("there was an error processing your request");
     }
     
