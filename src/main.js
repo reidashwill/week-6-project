@@ -29,6 +29,7 @@ $(document).ready(function(){
       $("#input-return").html(conversions.usd);
       $("#converted-return").html(" " + conversions.converted);
       $("#currency-type").html(" " + conversions.currency.toUpperCase());
+      $("#bit-coin-return").html(conversions.bitCoinPotential);
     })();
   });
 });
