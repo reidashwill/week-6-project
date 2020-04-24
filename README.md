@@ -23,6 +23,9 @@ _This app requires node to function!  if you do not currently have node installe
 * _Navigate to https://github.com/reidashwill/week-6-project_
 * _Clone the respository located there_
 * _In the terminal, navigate to the cloned repository_
+* _visit https://www.exchangerate-api.com/ and create an account to get your API key_
+* _Create a file named .env in the project root directory_
+* _add the following to line 1 of the .env file: API_KEY = (your API key goes here!)_
 * _Run the command: npm install_
 * _Run the command: npm run start_
 
