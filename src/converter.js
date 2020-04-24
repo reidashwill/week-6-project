@@ -6,19 +6,20 @@ export class Converter{
       let jsonifiedResponse;
       if (response.ok && response.status === 200) {
         jsonifiedResponse = await response.json();
-      }else{
         
+      }else{
         jsonifiedResponse = false;
       }
       return jsonifiedResponse;
     }catch(error){ // ADD MORE ERROR MESSAGE OPTIONS-----------------------------------------
-      alert("There was an error processing your request.  Please verify that you are using a valid API key in your .env file");
+      alert("There was an error processing your request.");
     }
   }
 
   convert(){
     if(this.currency === "eur"){
       this.converted = (this.usd * this.eurRate);
+      console.log(this.converted);
     }else if(this.currency === "cad"){
       this.converted = (this.usd * this.cadRate);
     }else if(this.currency === "dkk"){
