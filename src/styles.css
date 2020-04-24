@@ -1,7 +1,14 @@
-.well{
-  background-color: #52835A;
-  opacity: 80%;
+body{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 61%, rgba(255,255,255,0) 64%, rgba(126,128,125,1) 67%);
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#header{
+  margin-bottom: 50px;
+  margin-top: 75px;
 }
 .results{
   display: none;
+  margin-top: 3vh;
 }

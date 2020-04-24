@@ -7,15 +7,19 @@
 </head>
 <body>
   <div class="container">
-    <div class="jumbotron">
+    <div id="header">
       <h2>International Currency Converter</h2>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <form id="formGroup">
           <label>Input the amount of USD you want converted here.</label>
+          <label>(whole numbers only please)</label>
+          <br><br>
           <input id="amount" type="number" placeholder="$ 0.00">
-          <label>Choose the currency you want to convert to</label>
+          <br><br>
+          <label>Choose the currency you want to convert to:</label>
+          <br><br>
           <select id="currencySelector">
             <option value="eur">Euro</option>
             <option value="cad">Canadian Dollar</option>
@@ -29,7 +33,9 @@
            <button type="submit" class="btn-danger">Submit</button>
         </form>
       </div>
-      <div class="results well col-md-6">
+    </div>
+    <div class="row">
+      <div class="results col-md-6">
         <h4>You entered: $<span id="input-return"></span> US Dollars.</h4>
         <h4>This converts into<span id="converted-return"></span><span id="currency-type"></span></h4>
         <h4> You could also use this money to buy <span id="bit-coin-return"></span> Bit Coin!</h4>
