@@ -47,6 +47,6 @@ export class Converter{
     }else if(this.currency === "rub"){
       this.converted = (this.usd * this.rubRate);
     }
-    this.bitCoinPotential =  Math.round((this.usd * ((1 / this.btcPrice)) * 100000)/100000);
+    this.bitCoinPotential =  Math.round((this.usd * (1 / this.btcPrice)) * 100000)/100000;
   }
 }
